@@ -1,0 +1,15 @@
+name: Prueba ejecucion de Script
+run-name: Script de JS en Ubuntu
+
+on: [push]
+
+jobs:
+  ejecuta-script-js:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Inicia Actions"
+      - run: node --version 
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: ls -al
+      - run: node app.js
