@@ -13,3 +13,21 @@ jobs:
         uses: actions/checkout@v3
       - run: ls -al
       - run: node app.js
+
+name: Prueba ejecucion de deno
+run-name: Script de deno en Ubuntu
+
+on: [push]
+
+jobs:
+  ejecuta-script-deno:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Inicia Actions"
+      - name: Config Deno
+        uses: denoland/setup-deno@v2
+      - run: deno --version 
+      - name: Check out repository code
+        uses: actions/checkout@v3
+      - run: ls -al
+      - run: deno app.js
