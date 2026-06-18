@@ -14,11 +14,6 @@ jobs:
       - run: ls -al
       - run: node app.js
 
-name: Prueba ejecucion de deno
-run-name: Script de deno en Ubuntu
-
-on: [push]
-
 jobs:
   ejecuta-script-deno:
     runs-on: ubuntu-latest
